@@ -64,7 +64,7 @@ export const AccountProfileDetails = () => {
 
   const handleSubmit = () => {
     axios
-      .post(`https://casperexp-production-1e76.up.railway.app/api/questions/add`, {
+      .post(`https://casperexp-production-caf4.up.railway.app/api/questions/add`, {
         promptId: "123456",
         prompt: values.prompt,
         questions: forms,

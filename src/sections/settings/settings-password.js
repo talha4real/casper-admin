@@ -77,14 +77,14 @@ export const SettingsPassword = () => {
 
   const handleSubmit = () => {
     axios
-      .post(`http://localhost:5000/api/contest/add`, {
+      .post(`https://casperexp-production-caf4.up.railway.app/api/contest/add`, {
         contestId: generateUUID(),
         time: new Date(values.time).getTime(),
         questions: forms,
       })
       .then(async (res) => {
         if (res.status === 201) {
-          alert("Question Successfully Added");
+          alert("Contest Successfully Added");
           // setPrompt();
           setForms([
             {
@@ -125,8 +125,7 @@ export const SettingsPassword = () => {
               <Grid xs={12} md={12}>
                 <TextField
                   fullWidth
-                  helperText="Please add question here"
-                  label="Add time"
+                  helperText="Select Date"
                   name="time"
                   type="datetime-local"
                   onChange={handleChange}
@@ -140,7 +139,7 @@ export const SettingsPassword = () => {
                     <textarea
                       style={{ width: "100%", borderRadius: "10px", padding: "5px" }}
                       rows={7}
-                      placeholder="add description here..."
+                      placeholder="enter question here..."
                       label="Description"
                       name="question"
                       onChange={(event) => handleFormChange(event, i)}
