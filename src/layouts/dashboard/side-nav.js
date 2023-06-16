@@ -68,14 +68,17 @@ export const SideNav = (props) => {
             }}
           >
             <div>
-              <Typography color="inherit" variant="subtitle1">
+              <Typography color="inherit"
+variant="subtitle1">
                 Casper
               </Typography>
-              <Typography color="neutral.400" variant="body2">
+              <Typography color="neutral.400"
+variant="body2">
                 Production
               </Typography>
             </div>
-            <SvgIcon fontSize="small" sx={{ color: "neutral.500" }}>
+            <SvgIcon fontSize="small"
+sx={{ color: "neutral.500" }}>
               <ChevronUpDownIcon />
             </SvgIcon>
           </Box>
@@ -122,10 +125,12 @@ export const SideNav = (props) => {
             py: 3,
           }}
         >
-          <Typography color="neutral.100" variant="subtitle2">
+          <Typography color="neutral.100"
+variant="subtitle2">
             Need more features?
           </Typography>
-          <Typography color="neutral.500" variant="body2">
+          <Typography color="neutral.500"
+variant="body2">
             Check out our Pro solution template.
           </Typography>
 

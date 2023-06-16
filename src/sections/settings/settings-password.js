@@ -107,11 +107,14 @@ export const SettingsPassword = () => {
   return (
     <div>
       <Card>
-        <CardHeader subheader="The information can be edited" title="Add Contests" />
+        <CardHeader subheader="The information can be edited"
+title="Add Contests" />
         <CardContent sx={{ pt: 0 }}>
           <Box sx={{ m: -1.5 }}>
-            <Grid container spacing={3}>
-              <Grid xs={12} md={12}>
+            <Grid container
+spacing={3}>
+              <Grid xs={12}
+md={12}>
                 <TextField
                   fullWidth
                   helperText="Please add question here"
@@ -122,7 +125,8 @@ export const SettingsPassword = () => {
                   value={values.prompt}
                 />
               </Grid>
-              <Grid xs={12} md={12}>
+              <Grid xs={12}
+md={12}>
                 <TextField
                   fullWidth
                   helperText="Select Date"
@@ -135,7 +139,8 @@ export const SettingsPassword = () => {
               </Grid>
               {forms.map((data, i) => (
                 <>
-                  <Grid xs={12} md={12}>
+                  <Grid xs={12}
+md={12}>
                     <textarea
                       style={{ width: "100%", borderRadius: "10px", padding: "5px" }}
                       rows={7}
@@ -154,10 +159,12 @@ export const SettingsPassword = () => {
         </CardContent>
         <Divider />
         <CardActions sx={{ justifyContent: "flex-end" }}>
-          <Button variant="contained" onClick={handleAddForm}>
+          <Button variant="contained"
+onClick={handleAddForm}>
             Add More Questions
           </Button>
-          <Button onClick={handleSubmit} variant="contained">
+          <Button onClick={handleSubmit}
+variant="contained">
             Save details
           </Button>
         </CardActions>

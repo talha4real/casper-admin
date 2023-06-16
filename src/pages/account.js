@@ -22,8 +22,11 @@ const Page = () => (
             <Typography variant="h4">Questions</Typography>
           </div>
           <div>
-            <Grid container spacing={3}>
-              <Grid xs={12} md={13} lg={12}>
+            <Grid container
+spacing={3}>
+              <Grid xs={12}
+md={13}
+lg={12}>
                 <AccountProfileDetails />
               </Grid>
             </Grid>
