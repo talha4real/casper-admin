@@ -34,8 +34,9 @@ const states = [
 
 export const AccountProfileDetails = () => {
   const question = {
+    id: generateUUID(),
     question: "",
-    difficulty: "",
+    difficulty: "Hard",
     time: Date.now(),
     solution: "",
     value: "",
@@ -61,11 +62,23 @@ export const AccountProfileDetails = () => {
       [event.target.name]: event.target.value,
     }));
   }, []);
+  function generateUUID() {
+    let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      let r = Math.random() * 16 | 0,
+          v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+    return uuid;
+  }
+
+  // .post(`https://casperexp-production-caf4.up.railway.app/api/questions/add`, {
 
   const handleSubmit = () => {
+
+    console.log(forms)
     axios
-      .post(`https://casperexp-production-caf4.up.railway.app/api/questions/add`, {
-        promptId: "123456",
+      .post(`https://casperexp-production-caf4.up.railway.app/api/questions/addPrompt`, {
+        promptId: generateUUID(),
         prompt: values.prompt,
         questions: forms,
         category: "Hello",
@@ -74,11 +87,11 @@ export const AccountProfileDetails = () => {
       .then(async (res) => {
         if (res.status === 201) {
           alert("Question Successfully Added");
-          setPrompt();
           setForms([
             {
+              id: "1",
               question: "",
-              difficulty: "",
+              difficulty: "Hard",
               time: Date.now(),
               solution: "",
               value: "",
